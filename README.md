@@ -14,15 +14,3 @@ npm install
 npm run serve
 ```
 ### Navigate to localhost:8080
-
-
-### *For Future*
-### Run Tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
