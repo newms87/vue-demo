@@ -27,7 +27,8 @@ export default {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding: 1.25rem;
+    min-height: 36px;
+    padding: 1rem;
   }
 
   .expander__left {

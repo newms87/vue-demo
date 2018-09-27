@@ -26,7 +26,7 @@
         </div>
         <div class="stats__item">
           <div class="stats__item--count">0</div>
-          <div class="stats__item--label">Students</div>
+          <div class="stats__item--label">States</div>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 1.5rem;
+    padding: 2rem;
     position: relative;
   }
 
@@ -55,15 +55,19 @@ export default {
     background: #fff;
     color: #CDD4E3;
     cursor: pointer;
-    margin-left: calc(-2rem - 2px);
-    margin-top: 55%;
+    margin-left: calc(-2rem - 10px);
     position: absolute;
+    transition: color .5s ease;
+  }
+
+  .audiencePanel__arrows:hover {
+    color: #788193;
   }
 
   .audiencePanel__nodata {
     color: #CDD4E3;
     position: absolute;
-    margin-top: 55%;
+    margin: 55% 2rem 0 0;
     text-align: center;
   }
 

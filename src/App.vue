@@ -25,11 +25,12 @@ export default {
 <style>
 .app {
   display: grid;
-  grid-template-columns: 60px repeat(18, 1fr);
-  grid-template-rows: 60px repeat(18, 1fr);
+  grid-template-columns: 60px auto;
+  grid-template-rows: 60px auto;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  width: 100%;
 }
 </style>
