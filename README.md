@@ -1,22 +1,23 @@
 
 # vue-demo (alpha)
 
-## Project setup
+### Clone the repo
+```
+git clone https://github.com/basandlin/vue-demo.git
+```
+### Install dependencies
 ```
 npm install
 ```
-
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
+### Navigate to localhost:8080
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
+### *For Future*
+### Run Tests
 ```
 npm run test
 ```
