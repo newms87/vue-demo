@@ -13,41 +13,56 @@
       <div class="cell width__medium">Media Offered</div>
       <div class="cell width__medium relevance">Relevance</div>
     </div>
-    <div class="table__row">
-      <div class="cell width__xsmall">
-        <div class="cell__checkbox">
-          <!-- checkmark toggles here -->
-        </div>
-      </div>
-      <div class="cell width__large">University of Alabama</div>
-      <div class="cell width__small">93k</div>
-      <div class="cell width__medium">Tuscaloosa</div>
-      <div class="cell width__small">AL</div>
-      <div class="cell width__medium">
-        <font-awesome-icon icon="newspaper" style="font-size: 20px;" class="cell__mediaIcon"/>
-        <font-awesome-icon icon="desktop" style="font-size: 16px;" class="cell__mediaIcon"/>
-        <font-awesome-icon icon="comment" style="font-size: 20px;" class="cell__mediaIcon"/>
-        <font-awesome-icon icon="tree" style="font-size: 18px;" class="cell__mediaIcon"/>
-      </div>
-      <div class="cell width__medium">
-          <div class="cell__relevance">
-            <div class="cell__relevance--bar blue"/>
-            <div class="cell__relevance--bar blue"/>
-            <div class="cell__relevance--bar blue"/>
-            <div class="cell__relevance--bar"/>
-            <div class="cell__relevance--bar"/>
-            <font-awesome-icon icon="info-circle" style="font-size: 14px;" class="cell__infoIcon"/>
-          </div>
-      </div>
+    <TableRow />
     </div>
   </div>
 </template>
 
 <script>
+import TableRow from './TableRow.vue'
+
+const rows = [
+  {
+    campus: 'University of Colorado',
+    city: 'Boulder',
+    state: 'CO',
+    studentCount: 30000,
+    mediaOffered: [1, 0, 0, 1],
+    relevance: 3
+  },
+  {
+    campus: 'University of Colorado',
+    city: 'Boulder',
+    state: 'CO',
+    studentCount: 30000,
+    mediaOffered: [1, 0, 0, 1],
+    relevance: 3
+  },
+  {
+    campus: 'University of Colorado',
+    city: 'Boulder',
+    state: 'CO',
+    studentCount: 30000,
+    mediaOffered: [1, 0, 0, 1],
+    relevance: 3
+  },
+  {
+    campus: 'University of Colorado',
+    city: 'Boulder',
+    state: 'CO',
+    studentCount: 30000,
+    mediaOffered: [1, 0, 0, 1],
+    relevance: 3
+  }
+]
+
 export default {
   name: 'Table',
+  components: {
+    TableRow
+  },
   props: {
-    results: Array
+    rows: Array
   }
 }
 </script>
@@ -58,8 +73,7 @@ export default {
   padding-top: 1rem;
 }
 
-.table__header,
-.table__row {
+.table__header {
   align-items: center;
   border-bottom: 1px solid #CDD4E3;
   display: flex;
@@ -69,11 +83,6 @@ export default {
 
 .table__header {
   font-weight: bold;
-}
-
-.table__row {
-  cursor: pointer;
-  padding: .5rem 0;
 }
 
 .cell {
@@ -106,31 +115,5 @@ export default {
   box-shadow: inset 1px 1px 1px #788193;
   height: 14px;
   width: 14px;
-}
-
-.cell__mediaIcon {
-  color: #788193;
-  padding-right: .5rem;
-}
-
-.cell__relevance {
-  align-items: center;
-  display: flex;
-}
-
-.cell__relevance--bar {
-  background: #CDD4E3;
-  height: 24px;
-  margin-right: .25rem;
-  width: 8px;
-}
-
-.cell__relevance--bar.blue {
-  background: #5FAEE1;
-}
-
-.cell__infoIcon {
-  color: #CDD4E3;
-  margin-left: .5rem;
 }
 </style>

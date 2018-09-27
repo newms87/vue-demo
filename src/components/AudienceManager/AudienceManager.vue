@@ -27,7 +27,7 @@
                   <div class="stats__item--label">States</div>
                 </div>
               </div>
-              <Table :results="results"/>
+              <Table/>
               <div class="results__footer">
                   <Button label="Add to Audience"/>
               </div>
@@ -51,43 +51,13 @@ import FilterPanel from './FilterPanel.vue'
 import PageHeader from '../../components/PageHeader.vue'
 import Table from './Table.vue'
 
-const results = [
-  {
-    campus: 'University of Colorado',
-    city: 'Boulder',
-    state: 'CO',
-    studentCount: 30000,
-    mediaOffered: [1, 0, 0, 1],
-    relevance: 3
-  },
-  {
-    campus: 'University of Colorado',
-    city: 'Boulder',
-    state: 'CO',
-    studentCount: 30000,
-    mediaOffered: [1, 0, 0, 1],
-    relevance: 3
-  },
-  {
-    campus: 'University of Colorado',
-    city: 'Boulder',
-    state: 'CO',
-    studentCount: 30000,
-    mediaOffered: [1, 0, 0, 1],
-    relevance: 3
-  },
-  {
-    campus: 'University of Colorado',
-    city: 'Boulder',
-    state: 'CO',
-    studentCount: 30000,
-    mediaOffered: [1, 0, 0, 1],
-    relevance: 3
-  }
-]
+
 
 export default {
   name: 'AudienceManager',
+  data: {
+    rows: Array
+  },
   components: {
     AudiencePanel,
     Button,
