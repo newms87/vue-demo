@@ -83,6 +83,8 @@ export default {
   }
 
   .audience__content {
+    border: 1px solid #CDD4E3;
+    border-radius: 3px;
     height: calc(100% - 35px);
   }
 
